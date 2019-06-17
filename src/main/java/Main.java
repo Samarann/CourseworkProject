@@ -11,6 +11,7 @@ public class Main{
 
     public static void main(String[] args){
         openDatabase("Users.db"); //Opens the access to the database to be read to.
+        writeDatabase();
         readDatabase();
         closeDatabase(); //Closes the access to the database to be read to, so that it doesn't take up resources when it isn't being used.
     }
@@ -51,14 +52,13 @@ public class Main{
 
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("Please input UserID");
-            int UserIDAdd = sc.nextInt();
-
-            System.out.println("Please input Username");
-            String UsernameAdd = sc.nextString();
+            System.out.println("Please input Username"); //gttt
+            String UsernameAdd = sc.nextLine();
 
             System.out.println("Please input Password");
-            String PasswordAdd = sc.nextString();
+            String PasswordAdd = sc.nextLine();
+
+            int UserIDAdd = 5;
 
             ps.setInt(1, UserIDAdd);
             ps.setString(2, UsernameAdd);
